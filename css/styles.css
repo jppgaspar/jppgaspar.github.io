@@ -11818,7 +11818,6 @@ body {
 }
 
 .projects-section {
-    padding: 10rem 0;
     padding-bottom: 0px;
 }
 
@@ -11937,8 +11936,11 @@ body {
 }
 
 .demo {
-    border-collapse: collapse;
     border-spacing: 0;
+    width: 100%;
+    margin-bottom: 7%;
+    table-layout: fixed;
+    text-align: center;
 }
 
 .demo td {
