@@ -1,0 +1,70 @@
+/* Estilos personalizados */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-link {
+    font-size: 16px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.table {
+    margin-bottom: 30px;
+}
+
+.btn-danger {
+    background-color: #ff4c5a;
+    border-color: #ff4c5a;
+}
+
+.btn-danger:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.card {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #ff4c5a;
+    border-color: #ff4c5a;
+}
+
+.btn-primary:hover {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #f8f9fa;
+    color: #888;
+}

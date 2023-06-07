@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("./desktop-1920x1080.jpg");
+}
+
+.form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    width: 100%;
+    max-width: 500px;
+    opacity: 90%;
+}
+
+.form h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.form input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.form button {
+    background-color: #38a553;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.form button:hover {
+    background-color: #2e7c45;
+}
+
+.form .message {
+    font-size: 14px;
+    color: #888;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form .message a {
+    color: #38a553;
+    text-decoration: none;
+}
+
+.form .forgot-password {
+    text-align: right;
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.form .forgot-password a {
+    color: #38a553;
+    text-decoration: none;
+}
+
+.form .checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form .checkbox input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form .checkbox label {
+    font-size: 14px;
+    color: #444;
+}
+
+.form .register-form input[type="text"],
+.form .register-form input[type="email"],
+.form .register-form input[type="password"] {
+    border: 1px solid #ddd;
+}
+
+.form .forgot-password-form input[type="email"] {
+    border: 1px solid #ddd;
+}
+
+.form .back {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.form .back svg {
+    width: 20px;
+    height: 20px;
+    fill: #38a553;
+}
+
+.form .back:hover svg {
+    fill: #2e7c45;
+}
+
+@media screen and (max-width: 480px) {
+    .form {
+        padding: 20px;
+    }
+}

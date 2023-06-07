@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja de Roupas - Carrinho de Compras</title>
+    <link rel="stylesheet" type="text/css" href="style_carrinho.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos personalizados */
+        /* Adicione aqui seus estilos personalizados */
+    </style>
+</head>
+
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Minha Loja de Roupas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="produtos.html">Produtos</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="carrinho.html">Carrinho</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo do carrinho -->
+    <div class="container mt-4">
+        <h2>Carrinho de Compras</h2>
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Preço</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Total</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Itens do carrinho serão adicionados dinamicamente aqui -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Resumo do Pedido</h5>
+                        <p class="card-text">Total de Itens: <span id="total-items">0</span></p>
+                        <p class="card-text">Total a Pagar: R$ <span id="total-price">0.00</span></p>
+                        <a href="#" class="btn btn-primary btn-block">Finalizar Compra</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer bg-light text-center">
+        <div class="container">
+            <span class="text-muted">Minha Loja de Roupas &copy; 2023</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Função para adicionar produto ao carrinho
+        function addToCart(productName, price) {
+            var cartItems = document.getElementById('cart-items');
+            var totalItems = document.getElementById('total-items');
+            var totalPrice = document.getElementById('total-price');
+
+            var newRow = document.createElement('tr');
+            newRow.innerHTML = `
+        <td>${productName}</td>
+        <td>${price}</td>
+        <td>1</td>
+        <td>${price}</td>
+        <td><button class="btn btn-sm btn-danger" onclick="removeFromCart(this)">Remover</button></td>
+      `;
+
+            cartItems.appendChild(newRow);
+
+            var currentTotalItems = parseInt(totalItems.textContent);
+            totalItems.textContent = currentTotalItems + 1;
+
+            var currentTotalPrice = parseFloat(totalPrice.textContent);
+            totalPrice.textContent = (currentTotalPrice + parseFloat(price)).toFixed(2);
+        }
+
+        // Função para remover produto do carrinho
+        function removeFromCart(button) {
+            var row = button.parentNode.parentNode;
+            var priceCell = row.cells[1].textContent;
+            var totalItems = document.getElementById('total-items');
+            var totalPrice = document.getElementById('total-price');
+
+            row.parentNode.removeChild(row);
+
+            var currentTotalItems = parseInt(totalItems.textContent);
+            totalItems.textContent = currentTotalItems - 1;
+
+            var currentTotalPrice = parseFloat(totalPrice.textContent);
+            totalPrice.textContent = (currentTotalPrice - parseFloat(priceCell)).toFixed(2);
+        }
+
+        // Exemplo de adicionar produtos ao carrinho
+        addToCart('Nome do Produto 1', '49.99');
+        addToCart('Nome do Produto 2', '29.99');
+    </script>
+</body>
+
+</html>
