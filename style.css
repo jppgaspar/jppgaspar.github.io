@@ -8,11 +8,11 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Mulish', sans-serif;
 }
 
 body {
     background-color: #e2e5f9;
+    font-family: 'Mulish', sans-serif;
 }
 
 header {
@@ -21,14 +21,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    font-family: 'Mulish', sans-serif;
     margin-left: 10%;
     margin-right: 10%;
 }
 
 .logo h1 {
-    font-family: 'Mulish', sans-serif;
     color: #000;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .logo h1::first-letter {
@@ -68,6 +67,7 @@ main {
     padding: 20px;
     margin-left: 10%;
     margin-top: 5%;
+    font-family: 'Mulish', sans-serif;
 }
 
 .intro {
@@ -89,7 +89,6 @@ main {
 .about-me {
     font-size: 18px;
     margin-bottom: 20px;
-    font-family: 'Mulish', sans-serif;
 }
 
 .btn {
@@ -117,9 +116,32 @@ main {
     bottom: 0;
     display: flex;
     align-items: center;
-    font-family: 'Mulish', sans-serif;
     text-align: right;
     color: #000;
+}
+
+.work-list {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.work-item {
+    padding-bottom: 10px;
+    padding-top: 3px;
+    padding-left: 15px;
+}
+
+.btn-work {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    padding: 5px 5px;
+    background-color: #000;
+    margin-top: 5px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #000;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -148,10 +170,6 @@ main {
     .scroll-text {
         display: none;
     }
-}
-
-* {
-    font-family: 'Mulish', sans-serif;
 }
 
 h1,
